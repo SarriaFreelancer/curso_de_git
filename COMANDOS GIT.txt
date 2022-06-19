@@ -1,4 +1,76 @@
+//Informar quien eres
+git config --local user.name "Tu nombre aquí"
+git config --local user.email "Tu@email.aqui”
 
 //Inicializar un repositorio
 git init
+
+//Agregar un archivo al repositorio
+git add nombre-Archivo
+
+//Agregar todos los archivos
+git add .
+
+//Descartar cambios en el directorio
+git restore nombre-Archivo
+
+//Ver estado de archivos en repositorio
+git status
+
+//Hacer un commit o comentario del cambio
+git commit -m "comentario o descripcion"
+
+//Ubicarse en la rama principal
+git branch -M main 
+
+//Para conectar con el repositorio en la nube
+git remote add origin https://github.com/SarriaFreelancer/curso_de_git.git
+
+//Mandar el repositorio a la nube
+git push - u origin main
+
+//Configurar el Bash
+git config --global user.email "correo"
+
+//Eliminar archivos
+git rm nombre
+
+//Eliminarlo del area de preparacion
+git rm --cached
+
+//Cambiar el nombre 
+git mv README.md README
+git rm README.md
+git add README
+
+//Mas utilizados 
+git init
+git add .
+git status
+git commit -m "comentario o descripcion"
+git branch -M main 
+git remote add origin https://github.com/SarriaFreelancer/curso_de_git.git
+git push - u origin main
+
+//Ver el historico de modificaciones
+git log
+
+//Ver las modificaciones en una sola linea
+git log --oneline
+
+//Ver el cambio
+git log -p
+//salir 
+:q
+
+
+
+
+//inserte un repositorio existente desde la línea de comando
+git remote add origin https://github.com/SarriaFreelancer/curso_de_git.git
+git branch -M main
+git push -u origin main
+
+
+
 

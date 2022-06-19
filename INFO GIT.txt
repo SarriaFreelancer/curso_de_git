@@ -1,0 +1,84 @@
+HEAD: Estado actual de nuestro código, es decir, donde nos colocó Git
+Working tree: Lugar donde los archivos realmente están siendo almacenados
+index: Lugar donde Git almacena lo que será commiteado, es decir, la ubicación entre el working tree y el repositorio de Git en sí.
+
+Además de eso, los posibles estados de nuestros archivos son explicados con detalle en este link:
+scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio
+
+Despues de clonar un repositorio
+$ git status
+debe aparecer asi
+	On branch master
+	nothing to commit, working directory clean
+
+
+//Archivos no rastreados
+Untracked files:
+
+//Rasytrear un archivo
+git add nombre
+
+//salida mas simplificada
+git status -s
+git status --short
+
+//Ignorar Archivos
+cat .gitignore
+.[oa]
+~
+
+Las reglas sobre los patrones que puedes incluir en el archivo .gitignoreson las siguientes:
+
+	Ignorar las líneas en blanco y aquellas que comienzan con #.
+
+	Emplear patrones glob estándar que se utilizarán recursivamente a todo el directorio del repositorio local.
+
+	Los patrones pueden comenzar en barra ( /) para evitar recursividad.
+
+	Los patrones pueden terminar en barra ( /) para especificar un directorio.
+
+	Los patrones pueden negarse si se añade al principio el signo de exclamación ( !).
+
+# ignora los archivos terminados en .a
+*.a
+
+# pero no lib.a, aun cuando había ignorado los archivos terminados en .a en la línea anterior
+!lib.a
+
+# ignora unicamente el archivo TODO de la raiz, no subdir/TODO
+/TODO
+
+# ignora todos los archivos del directorio build/
+build/
+
+# ignora doc/notes.txt, pero no este: doc/server/arch.txt
+doc/*.txt
+
+# ignora todos los archivos .txt del directorio doc/
+doc/**/*.txt
+
+//Para ver qué ha cambiado pero aún no ha preparado, escribe git diff sin más parámetros:
+git diff
+
+//Si quieres ver lo que ha preparado y será incluido en la próxima confirmación
+git diff --staged
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
